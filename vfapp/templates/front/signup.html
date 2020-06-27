@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>VFlix | Signup</title>
+</head>
+<body>
+
+	<form action="{% url 'signup' %}" method="post">
+	{% csrf_token %}
+		<p>Username : <input type="text" name="uname"></p>
+		<p>Password : <input type="password" name="pword"></p>
+		<p>Verify password : <input type="password" name="vpword"></p>
+		<button type="submit">Signup</button>
+	</form>
+	<a href="{% url 'enter' %}">Login</a>
+
+</body>
+</html>
