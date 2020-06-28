@@ -11,7 +11,7 @@ urlpatterns = [
 	url(r'^logout/$', views.exit, name = 'exit'),
 	url(r'^$', views.home, name = 'home'),
 	url(r'^get_movies/$', views.get_movies, name = 'get_movies'),
-	url(r'^graphql/$', GraphQLView.as_view(graphiql=True, schema=schema)),
+	url(r'^graphql/$', GraphQLView.as_view(graphiql=True, schema=schema), name = 'graphql'),
 	#path("graphql", GraphQLView.as_view(graphiql=True)),
 ]
 
